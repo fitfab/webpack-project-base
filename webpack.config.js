@@ -26,6 +26,9 @@ module.exports = {
     "postcss": [
         require("autoprefixer")
     ],
+    "plugins": [
+        new webpack.BannerPlugin("Copyright fitfab by miguel julio")
+    ],
     "devServer": {
         "contentBase": "./public",
         "colors": true,
