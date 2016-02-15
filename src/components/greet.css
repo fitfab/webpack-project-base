@@ -1,13 +1,8 @@
-html {
-    box-sizing: border-box;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    color: #666;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-.greet-msg {
+
+.greetmsg {
     margin: 20px;
     padding: 10px 15px;
     border-radius: 20px;
     border: 1px solid #cef;
+    color: #fff;
 }
