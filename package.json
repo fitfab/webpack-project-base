@@ -25,12 +25,14 @@
   },
   "homepage": "https://github.com/fitfab/webpack-project-base#readme",
   "devDependencies": {
+    "autoprefixer": "^6.3.3",
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.2",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
     "css-loader": "^0.23.1",
     "json-loader": "^0.5.4",
+    "postcss-loader": "^0.8.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
