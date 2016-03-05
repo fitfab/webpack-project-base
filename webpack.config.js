@@ -17,7 +17,7 @@ module.exports = {
                 "loader": "json"
             },
             {
-                "test": /\.js$/,
+                "test": /\.jsx?$/,
                 "exclude": /node_modules/,
                 "loader": "babel"
             },
@@ -39,6 +39,7 @@ module.exports = {
         "contentBase": "./public",
         "colors": true,
         "historyApiFallback": true,
-        "inline": true
+        "inline": true,
+        "hot": true
     }
 }

@@ -8,6 +8,9 @@ module.exports = {
         "path": __dirname + "/public",
         "filename": "bundle.js"
     },
+    resolve : {
+        extensions : ["", ".js", ".jsx", ".json"]
+    },
     "module": {
         "loaders": [
             {
@@ -15,7 +18,7 @@ module.exports = {
                 "loader": "json"
             },
             {
-                "test": /\.js$/,
+                "test": /\.jsx?$/,
                 "exclude": /node_modules/,
                 "loader": "babel"
             },
