@@ -1,6 +1,6 @@
 import React from 'react';
 import config from '../data/config.json';
-
+import Aside from 'aside';
 import styles from './greet.css';
 
 export default React.createClass({
@@ -8,6 +8,7 @@ export default React.createClass({
     return (
       <div className={styles.greetmsg}>
         {config.greetText}
+        <Aside />
       </div>
     );
   }

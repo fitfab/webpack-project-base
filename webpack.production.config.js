@@ -1,5 +1,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
     "entry": __dirname + "/src/main.js",
     "output" : {
@@ -9,7 +11,7 @@ module.exports = {
     "module": {
         "loaders": [
             {
-                "test": /\.json/,
+                "test": /\.json$/,
                 "loader": "json"
             },
             {
@@ -19,7 +21,7 @@ module.exports = {
             },
             {
                 "test": /\.css$/,
-                "loader": "style!css?modules!postcss"
+                "loader": ExtractTextPlugin.extract('style', 'css?modules!postcss')
             }
         ]
     },
@@ -28,6 +30,9 @@ module.exports = {
     ],
     "plugins": [
         new webpack.BannerPlugin("Copyright fitfab by miguel julio"),
-        new HtmlWebpackPlugin({template: __dirname + "/src/index.tmpl.html"})
+        new HtmlWebpackPlugin({template: __dirname + "/src/index.tmpl.html"}),
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
+        new ExtractTextPlugin("style.css")
     ]
 }
