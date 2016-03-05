@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    "devtool": "eval-source-map",
     "entry": __dirname + "/src/main.js",
     "output" : {
         "path": __dirname + "/public",
@@ -29,13 +28,6 @@ module.exports = {
     ],
     "plugins": [
         new webpack.BannerPlugin("Copyright fitfab by miguel julio"),
-        new HtmlWebpackPlugin({template: __dirname + "/src/index.tmpl.html"}),
-        new webpack.HotModuleReplacementPlugin()
-    ],
-    "devServer": {
-        "contentBase": "./public",
-        "colors": true,
-        "historyApiFallback": true,
-        "inline": true
-    }
+        new HtmlWebpackPlugin({template: __dirname + "/src/index.tmpl.html"})
+    ]
 }
