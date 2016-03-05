@@ -2,7 +2,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     "devtool": "eval-source-map",
-    "entry": __dirname + "/src/main.js",
+    "entry": ["babel-polyfill", __dirname + "/src/main.js"],
     "output" : {
         "path": __dirname + "/public",
         "filename": "bundle.js"
