@@ -7,8 +7,8 @@ export default React.createClass({
   render() {
     return (
       <div className={styles.greetmsg}>
-        {config.greetText}
-        <Aside />
+        {config[0].greetText}
+        <Aside list={config} />
       </div>
     );
   }

@@ -1,3 +1,14 @@
-{
-    "greetText": "hola there and greetings from JSON!"
-}
+[
+    {
+        "greetText": "hola there and greetings from JSON!"
+    },
+    {
+        "greetText": "Bonjour laba"
+    },
+    {
+        "greetText": "great day"
+    },
+    {
+        "greetText": "Happy day"
+    }
+]

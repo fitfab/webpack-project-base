@@ -1,18 +1,22 @@
 
-.asidePane {
+.aside-pane {
+    background: #fff;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     width: 280px;
-    background: #fff;
     padding: 20px;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    overflow-scrolling: touch;
 }
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    overflow-scrolling: touch;
 }
-.asidePane ul li {
-    color: red;
+.aside-pane ul li {
+    color: #776;
 }
