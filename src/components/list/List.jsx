@@ -17,8 +17,6 @@ const List = React.createClass({
     },
 
     randString() {
-        let text = "";
-        const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         const tweets = [
             'Welcome to the new message system',
             'ancore this is you working hard',
@@ -31,12 +29,8 @@ const List = React.createClass({
             'No more wire-hangers ever!!!',
             'Papa don\'t  preach! i am in trouble deep'
             ];
-        /*for( var i=0; i < 5; i++ )
-            text += possible.charAt(Math.floor(Math.random() * possible.length));*/
-        text = tweets[Math.floor(Math.random() * tweets.length)];
 
-        console.log(text)
-        return text;
+        return tweets[Math.floor(Math.random() * tweets.length)];
     },
 
     mayRenderItem() {
@@ -61,7 +55,12 @@ const List = React.createClass({
             <button onClick={this.handleClick}>Add Text</button>
             <ul className='list'>
 
-                <ReactCSSTransitionGroup transitionName="item" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+                <ReactCSSTransitionGroup 
+                    transitionName="item" 
+                    transitionEnterTimeout={500} 
+                    transitionLeaveTimeout={500}
+                    transitionAppear={true} 
+                    transitionAppearTimeout={500}>
                     { this.mayRenderItem() }
                 </ReactCSSTransitionGroup>
             </ul>
